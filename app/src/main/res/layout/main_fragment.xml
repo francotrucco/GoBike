@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name=""
+            type="" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+
+    <TextView
+        android:id="@+id/salute_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="24dp"
+        android:text="Hello, Frank"
+        app:layout_constraintBottom_toTopOf="@id/points_earned"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/points_earned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You earned 650 points today"
+        app:layout_constraintTop_toBottomOf="@id/salute_text"
+        app:layout_constraintBottom_toTopOf="@id/ticket_list"
+        app:layout_constraintStart_toStartOf="@id/salute_text"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ticket_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/points_earned" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
